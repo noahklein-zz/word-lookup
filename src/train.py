@@ -8,7 +8,7 @@ CACHE_FILE = "files/cache.txt"
 WORDS_RE = r"[a-z]+"
 
 
-def cache(f):
+def cache(f, file=CACHE_FILE):
     def _cache(*args, **kwargs):
         if os.path.isfile(CACHE_FILE):
             return open(CACHE_FILE).read()
